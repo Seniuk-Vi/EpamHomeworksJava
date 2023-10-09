@@ -19,7 +19,7 @@ public class BeanPost implements BeanPostProcessor {
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         validateBeans(bean);
-        System.out.println("postProcessBeforeInitialization: " + bean + " beanName: " + beanName);
+        System.out.println("postProcessAfterInitialization: " + bean + " beanName: " + beanName);
         return BeanPostProcessor.super.postProcessAfterInitialization(bean, beanName);
     }
 

@@ -14,6 +14,20 @@ public class Main {
         for (String beanDefinitionName : context.getBeanDefinitionNames()) {
             System.out.println(beanDefinitionName);
         }
-  //      System.out.println(  context.getBean("Qualified"));
+        /**
+         * BeanFactoryPostProcessor
+         *
+         * BeanA static init block
+         * BeanA init block
+         * BeanA constructor + parent classes
+         * Set value through @Value
+         * postProcessBeforeInitialization: BeanA{name='null', value=1} beanName: beanA
+         * BeanA PostConstruct
+         * BeanA InitializingBean (after properties set)
+         * postProcessAfterInitialization: BeanA{name='NoName', value=1} beanName: beanA
+         *
+         * @PreDestroy
+         * DisposableBean. dispose
+         */
     }
 }

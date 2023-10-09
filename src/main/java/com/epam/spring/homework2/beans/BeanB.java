@@ -10,10 +10,12 @@ public class BeanB {
 
     @Value("${data.source.beanB.name}")
     public void setName(String name) {
+        System.out.println("Set value through @Value");
         this.name = name;
     }
     @Value("${data.source.beanB.value:0}")
     public void setValue(int value) {
+        System.out.println("Set value through @Value");
         this.value = value;
     }
     public void init() {

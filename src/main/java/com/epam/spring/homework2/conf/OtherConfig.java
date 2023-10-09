@@ -15,7 +15,7 @@ import org.springframework.core.annotation.Order;
 public class OtherConfig {
 
 
-    @Bean(initMethod = "init",destroyMethod = "destroy")
+    @Bean(initMethod = "otherInit",destroyMethod = "destroy")
     @DependsOn("beanD")
     public BeanB beanB() {
         return new BeanB();
